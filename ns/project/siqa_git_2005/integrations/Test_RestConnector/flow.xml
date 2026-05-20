@@ -5,7 +5,7 @@
 
   <!-- nodes -->
 
-<SEQUENCE NAME="NEW" EXIT-ON="FAILURE">
+<INVOKE NAME="Invoke predefined:com.webmethods.cloudstreams.salesforce.rest_v60" TIMEOUT="" SERVICE="project.siqa_git_2005.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.operations.actions:TestRest" VALIDATE-IN="" VALIDATE-OUT="">
   <COMMENT></COMMENT>
-</SEQUENCE>
+</INVOKE>
 </FLOW>
