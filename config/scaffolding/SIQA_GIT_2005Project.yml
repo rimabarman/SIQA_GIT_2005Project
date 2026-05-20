@@ -20,6 +20,7 @@ packages:
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: WmSalesforceRESTProvider
+  version: 12.0.0.0.18
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
 services:
@@ -81,8 +82,42 @@ services:
     version: "1.0"
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.18
+- serviceName: project.siqa_git_2005.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.operations.actions:TestRest
+  packages:
+  - name: SIQA_GIT_2005Project
+    version: "1.0"
+  - name: DADA_ExtendedProperty
+    version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.18
+- serviceName: project.siqa_git_2005.integrations:deepclonetest
+  packages:
+  - name: SIQA_GIT_2005Project
+    version: "1.0"
+  - name: DADA_ExtendedProperty
+    version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.18
+- serviceName: pub.string:stringToBytes
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.828
+- serviceName: pub.utils:deepClone
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.828
+- serviceName: pub.string:bytesToString
+  packages:
+  - name: WmPublic
+    version: 12.1.0.0.828
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
+  ? iscloudstreamsconnectorservice.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.connectionAlias
+  : project.siqa_git_2005.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:RestConnAlias
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbc.SAP TxStore Pool.poolThreshold: "0"
   ? cloudstreamsconnection.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.retryIfRequestSentOk
@@ -161,9 +196,11 @@ configurationVariables:
   jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
   ? cloudstreamsconnection.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.validateAfterInactivity
   : "1000"
+  ? iscloudstreamsconnectorservice.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.virtualServiceName
+  : WmCloudStreams.RestVS
   jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
   ? cloudstreamsconnection.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.oauth.accessToken
-  : "{AES}bzO+KX5xKoE0CKrgiYZryDr8htPRGuUMY3q4TndvSIQ6E3Hih2GI/xLe8CAGMBhBc5ZOWvNUI+3pwbsAg1sNfIBX4BHDEwKsjJ9XzOKnpS1oSsZMHmkNTnWajawBLOChHhYVaKBE7rCdHk1MTHVOXWmK1wuN3U1rA1B0VhuZoUw="
+  : "{AES}bzO+KX5xKoE0CKrgiYZryFQJvq1neeMzTgLJBjIo3UVc3Apmms4mWJPvp8y77Q5AoaChAtPebnNZG5P6diBq3BStQo0Aye5yeIOeXoyJZIwdg9VLPbqOqzG/WeEisExmbsZ7hd+/pvFG6ItIy2Gd0GmK1wuN3U1rA1B0VhuZoUw="
   ? cloudstreamsconnection.project..siqa_git_2005..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.oauth_v20.accessTokenRefreshURL
   : https://login.salesforce.com/services/oauth2/token
   jdbc.SAP TxStore Pool.userid: root
