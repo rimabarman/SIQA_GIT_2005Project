@@ -8,12 +8,13 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: SIQA_TimeoutTest
+  version: "1.0"
   gitServerName: SIQAGitHub
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 services:
-- serviceName: project.siqa_git_2005.integrations:LogMessage
+- serviceName: project.siqa_git_2005.integrations:Copy_LogMessage
   packages:
   - name: SIQA_GIT_2005Project
     version: "1.0"
@@ -23,6 +24,12 @@ services:
   packages:
   - name: WmPublic
     version: 12.1.0.0.828
+- serviceName: project.siqa_git_2005.integrations:LogMessage
+  packages:
+  - name: SIQA_GIT_2005Project
+    version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
   jdbcfunc.SAPTxStore.failFastMode: false
