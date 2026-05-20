@@ -1,6 +1,13 @@
 version: "1.0"
 projectName: SIQA_GIT_2005Project
 runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: CalldeepcloneTest
+    type: workflow
+    uid: fl098a2e76f4964155bfe98efd12a3b259
+    stepId: a0
+    reference: project.siqa_git_2005.integrations:deepclonetest
 - runtimeAlias: SIQA_ERT_2007_SI
   assets:
   - name: Timeout_180Sec
