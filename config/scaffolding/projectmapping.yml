@@ -1,0 +1,10 @@
+version: "1.0"
+projectName: SIQA_GIT_2005Project
+runtimes:
+- runtimeAlias: SIQA_ERT_2007_SI
+  assets:
+  - name: Timeout_180Sec
+    type: workflow
+    uid: flda05a38d401d4c3aaa2f2d1aeee3cee8
+    stepId: a0
+    reference: SIQA_TimeoutTest:delayfor180Sec
