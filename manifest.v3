@@ -12,18 +12,19 @@
   <record name="requires" javaclass="com.wm.util.Values">
     <value name="SIQA_TimeoutTest">1.0</value>
     <value name="DADA_ExtendedProperty">1.0</value>
+    <value name="WmSalesforceRESTProvider">12.0.0.0.18</value>
   </record>
   <null name="lazy_load_node_types"/>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">12</value>
+  <value name="build">13</value>
   <null name="description"/>
   <value name="created_date">20-05-2026 04:57:19 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-05-20T06:35:21.682959063Z</value>
+  <value name="lastUpdated">2026-05-20T06:35:33.071363875Z</value>
   <value name="wmProjectId">flb02ff0ed21b4403998268e08646ecf59</value>
   <value name="creator">Rima Barman</value>
 </Values>
